@@ -1,54 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-    <!-- Fontawesome icons cdn link -->
-    <script src="https://kit.fontawesome.com/db540a34d6.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="css/index.css">
-    <title>LOGIN - FIRST SCHOOL</title>
-</head>
+@include('temps.header')
 
 <body>
-    <nav class="main-nav w-100">
-        <div class="logo-div">
-            <img src="images/first_sch.png" alt="">
-        </div>
-
-        <div class="categories w-75">
-            <a href="/"><button class="nav_btn w-100"><span class="hov"></span> HOME</button></a>
-            <button class="nav_btn"><span class="hov"></span> ABOUT</button>
-            <button class="nav_btn"><span class="hov"></span> ENROLL</button>
-
-            <div class="menu-div">
-                <button class="btn-text"><i class="fa-regular fa-compass"></i></button>
-            </div>
-        </div>
-    </nav>
-
+    @include('temps.nav')
     <section class="login-body w-100">
-        <form action="" class="form-control p-4 w-50">
+        <form action="{{route('auth.check')}}" method="POST" class="form-control p-4 w-50">
+            @csrf
             <div class="usr-input w-100">
                 <h2>LOGIN</h2>
                 <hr>
             </div>
+            @if(Session::get('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+            @endif
+
+            @if(Session::get('fail'))
+            <div class="alert alert-danger">
+                {{ Session::get('fail') }}
+            </div>
+            @endif
             <div class="usr_input w-100">
                 <label for="password">Enter your email here:</label>
                 <input type="email" name="email" required placeholder="Email" class="form-control" value="">
+                <span class="text-danger">@error('email'){{ $message }} @enderror</span>
             </div>
             <div class="usr_input w-100">
                 <label for="email">Enter your password here:</label>
                 <input type="password" name="password" required class="form-control" value="">
+                <span class="text-danger">@error('password'){{ $message }} @enderror</span>
             </div>
             <div class="usr_input w-100">
-                <a href="">Don't have an account?</a>
+                <a href="register">Don't have an account?</a>
             </div>
             <button class="btn btn-secondary p-2 m-1 w-100" type="submit">SUBMIT</button>
         </form>

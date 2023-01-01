@@ -24,12 +24,13 @@
 
         <div class="categories w-75">
             <div class=""></div>
-            <a href="/"> <button class="nav_btn w-100"><span class="hov"></span> HOME</button></a>
-            <button class="nav_btn"><span class="hov"></span> ABOUT</button>
-            <button class="nav_btn"><span class="hov"></span> ENROLL</button>
+            <div class=""></div>
+            <a href="register_units"> <button class="nav_btn w-100"><span class="hov"></span>UNIT REGISTRATION</button></a>
+            <a href="logout"> <button class="nav_btn w-100"><span class="hov"></span> LOGOUT</button></a>
+
 
             <div class="menu-div">
-                <h3 class="ps-4">BRIAN KAMAU</h3>
+                <h3 class="ps-4">{{ $LoggedUserInfo['stud_name']}}</h3>
             </div>
         </div>
     </nav>
@@ -88,11 +89,12 @@
             </div>
             <hr>
             <div class="units-grid w-100">
+
+                @foreach ($my_units as $item)
                 <div class="unit-card w-100">
                     <div class="sect-1">
                         <h6>Course</h6>
-                        <h2>OOP Java</h2>
-                        <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
+                        <h2>{{$item->unit_name}}</h2>
                     </div>
                     <div class="course-info">
                         <div class="progress-container">
@@ -101,83 +103,14 @@
                                 6/9 Challenges
                             </span>
                         </div>
-                        <h6>Chapter 4</h6>
-                        <h2>Inheritance and functions</h2>
-                        <a href="unit"> <button class="button-54">Continue</button></a>
+                        <h6>STARTED ON:</h6>
+                        <h4>{{$item->created_at}}</h4>
+                        <h6>ENDS ON:</h6>
+                        <h4>-</h4>
+                        <a href="{{ url('course/'.$item->unit_id) }}"> <button class="button-54">Continue</button></a>
                     </div>
                 </div>
-                <div class="unit-card w-100">
-                    <div class="sect-1">
-                        <h6>Course</h6>
-                        <h2>OOP Java</h2>
-                        <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="course-info">
-                        <div class="progress-container">
-                            <div class="progress"></div>
-                            <span class="progress-text">
-                                6/9 Challenges
-                            </span>
-                        </div>
-                        <h6>Chapter 4</h6>
-                        <h2>Inheritance and functions</h2>
-                        <button class="button-54">Continue</button>
-                    </div>
-                </div>
-                <div class="unit-card w-100">
-                    <div class="sect-1">
-                        <h6>Course</h6>
-                        <h2>OOP Java</h2>
-                        <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="course-info">
-                        <div class="progress-container">
-                            <div class="progress"></div>
-                            <span class="progress-text">
-                                6/9 Challenges
-                            </span>
-                        </div>
-                        <h6>Chapter 4</h6>
-                        <h2>Inheritance and functions</h2>
-                        <button class="button-54">Continue</button>
-                    </div>
-                </div>
-                <div class="unit-card w-100">
-                    <div class="sect-1">
-                        <h6>Course</h6>
-                        <h2>OOP Java</h2>
-                        <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="course-info">
-                        <div class="progress-container">
-                            <div class="progress"></div>
-                            <span class="progress-text">
-                                6/9 Challenges
-                            </span>
-                        </div>
-                        <h6>Chapter 4</h6>
-                        <h2>Inheritance and functions</h2>
-                        <button class="button-54">Continue</button>
-                    </div>
-                </div>
-                <div class="unit-card w-100">
-                    <div class="sect-1">
-                        <h6>Course</h6>
-                        <h2>OOP Java</h2>
-                        <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="course-info">
-                        <div class="progress-container">
-                            <div class="progress"></div>
-                            <span class="progress-text">
-                                6/9 Challenges
-                            </span>
-                        </div>
-                        <h6>Chapter 4</h6>
-                        <h2>Inheritance and functions</h2>
-                        <button class="button-54">Continue</button>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

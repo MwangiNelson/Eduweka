@@ -26,8 +26,8 @@
             <button class="nav_btn"><span class="hov"></span> HOME</button>
             <button class="nav_btn"><span class="hov"></span> ABOUT</button>
             <a href="login" class="w-100"> <button class="nav_btn w-100"><span class="hov"></span> LOGIN</button></a>
-            <button class="nav_btn"><span class="hov"></span> ENROLL</button>
 
+            <a href="register" class="w-100"> <button class="nav_btn w-100"><span class="hov"></span> ENROLL</button></a>
             <div class="menu-div">
                 <button class="btn-text"><i class="fa-regular fa-compass"></i></button>
             </div>
@@ -40,7 +40,7 @@
             <h1>You'll find your academic excellence</h1>
         </div>
         <div class="hero-btns">
-            <button class="hero-btn" role="button"><span class="text">ENROLL</span></button>
+            <a href="register"> <button class="hero-btn" role="button"><span class="text">ENROLL</span></button></a>
             <button class="hero-btn" role="button"><span class="text">ABOUT US</span></button>
         </div>
     </section>

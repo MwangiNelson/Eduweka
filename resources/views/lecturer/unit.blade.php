@@ -26,10 +26,10 @@
             <div class=""></div>
             <div class=""></div>
             <div class=""></div>
-            <a href="{{route('student')}}" class="w-100"><button class="nav_btn w-100"><span class="hov"></span> BACK</button></a>
+            <a href="{{route('teacher')}}" class="w-100"><button class="nav_btn w-100"><span class="hov"></span> BACK</button></a>
 
             <div class="menu-div">
-                <h3 class="ps-4">{{ $LoggedUserInfo['stud_name']}}</h3>
+                <h3 class="ps-4">{{ $LoggedUserInfo['staff_name']}}</h3>
             </div>
         </div>
     </nav>
@@ -43,17 +43,48 @@
                 <p>Tr. {{$unit->unit_lecturer}}</p>
             </div>
         </div>
+
+        <div class="content w-100 m-0 p-2">
+            <div class="header">
+                <h4>ADD COURSEWORK</h4>
+                <hr>
+            </div>
+            @if(Session::get('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+            @endif
+
+            @if(Session::get('fail'))
+            <div class="alert alert-danger">
+                {{ Session::get('fail') }}
+            </div>
+            @endif
+            <form action="{{ url('add-work/'.$unit->id) }}" method="post">
+                @csrf
+                <div class="form-input p-2 w-100">
+                    <label for="header">TITLE:</label>
+                    <input type="text" required name="cwork_head" class="form-control w-75">
+                </div>
+                <div class="form-input p-2 w-100">
+                    <label for="header">DETAILS:</label>
+                    <textarea name="cwork_desc" required class="form-control w-75" id="" rows="4"></textarea>
+                </div>
+                <div class="form-input p-2 w-100">
+                    <button class="btn btn-dark">
+                        ADD COURSEWORK
+                    </button>
+                </div>
+
+
+            </form>
+
+        </div>
         @foreach ($unit_coursework as $item)
         <div class="content w-100">
-            <h4>{{$item->cwork_head}}</h4>
-            <hr>
+            <h3>{{$item->cwork_head}}</h3>
             <p>{{$item->cwork_desc}}</p>
-
-            <div class="content-owner w-100">
-                <h3>POSTED BY: {{$item->posted_by}}</h3>
-                <h3>CREATED AT: {{$item->created_at}}</h3>
-            </div>
-
+            <a href="{{ url('delete-work/'.$item->id) }}"><button class="btn btn-outline-danger">DELETE WORK</button></a>
         </div>
         @endforeach
 

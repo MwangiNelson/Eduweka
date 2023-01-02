@@ -19,17 +19,17 @@
 <body>
     <nav class="main-nav w-100">
         <div class="logo-div">
-            <img src="/images/first_sch.png" alt="">
+            <img src="/images/app_logo.png" alt="">
         </div>
 
         <div class="categories w-75">
             <div class=""></div>
             <div class=""></div>
             <div class=""></div>
-            <a href="student" class="w-100"><button class="nav_btn w-100"><span class="hov"></span> BACK</button></a>
+            <a href="student" class="w-100"><button class="nav_btn w-100"><i class="fa-solid fa-arrow-left pe-3"></i> BACK</button></a>
 
             <div class="menu-div">
-                <h3 class="ps-4">{{ $LoggedUserInfo['stud_name']}}</h3>
+                <h6 class="p-3">{{ $LoggedUserInfo['stud_name']}}</h6>
             </div>
         </div>
     </nav>
@@ -74,11 +74,6 @@
         </div>
     </section>
     <footer class="footer w-100">
-        <div class="upper-footer w-100 ">
-            <h3>FROM OUR SCHOOLYARD</h3>
-            <p>@firstschool</p>
-            <h5>FOLLOW US ON INSTAGRAM</h5>
-        </div>
         <div class="lower-footer w-75">
             <div class="footer-list w-100">
                 <h4>CONTACT US</h4>

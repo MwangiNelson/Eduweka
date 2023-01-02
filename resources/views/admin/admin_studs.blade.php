@@ -20,29 +20,28 @@
 <body>
     <nav class="admin-nav w-100">
         <div class="logo-div">
-            <img src="images/first_sch.png" alt="">
-        </div>
-
-        <div class="categories">
-            <button class="nav_btn"><span class="text">STUDENTS</span><span>Etudiantes</span></button>
-            <button class="nav_btn"><span class="text">STAFF</span><span>Personnel</span></button>
-            <button class="nav_btn"><span class="text">COURSES</span><span>Cours</span></button>
-            <button class="nav_btn"><span class="text">SETTINGS</span><span>Paramètres</span></button>
-            <a href="{{route('logout')}}"><button class="nav_btn"><span class="text">LOGOUT</span><span>Partir</span></button></a>
+            <img src="images/app_logo.png" alt="">
         </div>
         <div class="admin-profile pe-4">
             <h4>{{$LoggedUserInfo['staff_name']}}</h4>
         </div>
     </nav>
+    <div class="top-list">
+        <button class="nav_btn"><span class="text">STUDENTS</span></button>
+        <button class="nav_btn"><span class="text">STAFF</span></button>
+        <button class="nav_btn"><span class="text">COURSES</span></button>
+        <button class="nav_btn"><span class="text">SETTINGS</span></button>
+        <a href="{{route('logout')}}" class="w-100"><button class="nav_btn"><span class="text">LOGOUT</span></button></a>
+    </div>
     <section class="target target-selected w-100">
         <div class="header w-100 p-3">
-            <h3>Students</h3>
+            <h3>&gt; STUDENTS</h3>
             <hr>
         </div>
         <div class="main-panel w-100">
             <div class="category-summary">
                 <div class="buttons-list w-100">
-                    <button class="btn-option selected">GENERAL <span class="fragment"></span></button>
+                    <button class="btn-option selected">ALL STUDENTS<span class="fragment"></span></button>
                     <a href="register"><button class="btn-option">ADD STUDENT <span class="fragment"></span></button></a>
                 </div>
             </div>
@@ -50,7 +49,7 @@
 
                 <div class="panel active w-100">
                     <div class="cat-head w-100">
-                        <h4>GENERAL OVERVIEW</h4>
+                        <h4>ALL STUDENTS</h4>
                         <hr class="w-100">
                     </div>
                     <div class="table-section w-100">
@@ -73,7 +72,7 @@
                                     <td>{{ $item->stud_id }}</td>
                                     <td>
                                         <div class="options">
-                                            <a href="{{ url('edit-student/'.$item->stud_id) }}"><button class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                            <a href=""><button class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button></a>
                                             <a href="{{ url('delete-student/'.$item->stud_id) }}"><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></a>
                                         </div>
                                     </td>

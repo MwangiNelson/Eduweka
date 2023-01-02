@@ -10,5 +10,5 @@
     <script src="https://kit.fontawesome.com/db540a34d6.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/index.css">
-    <title>LOGIN - FIRST SCHOOL</title>
+    <title>LOGIN - Eduweka</title>
 </head>

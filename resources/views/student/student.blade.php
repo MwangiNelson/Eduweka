@@ -19,73 +19,30 @@
 <body>
     <nav class="main-nav w-100">
         <div class="logo-div">
-            <img src="images/first_sch.png" alt="">
+            <img src="images/app_logo.png" alt="">
         </div>
 
         <div class="categories w-75">
+            <div class=""></div>
             <div class=""></div>
             <div class=""></div>
             <a href="register_units"> <button class="nav_btn w-100"><span class="hov"></span>UNIT REGISTRATION</button></a>
             <a href="logout"> <button class="nav_btn w-100"><span class="hov"></span> LOGOUT</button></a>
 
 
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
             <div class="menu-div">
-                <h3 class="ps-4">{{ $LoggedUserInfo['stud_name']}}</h3>
+                <h6 class="p-3">{{ $LoggedUserInfo['stud_name']}}</h6>
             </div>
         </div>
     </nav>
     <section class="main w-100">
-        <div class="programs w-75">
-            <div class="header w-100">
-                <h2>Upcoming programs</h2>
-            </div>
-            <hr>
-            <div class="prog-grid w-75">
-                <div class="prog-card w-100">
-                    <img src="images/candace.jpg" alt="">
-
-                    <div class="details pt-2">
-                        <h4>MEET CANDACE, AN MIT PROF..</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quis temporibus dolorum magni tempore eveniet iusto minima quisquam impedit! Illo pariatur ab dicta provident id.</p>
-                    </div>
-                    <div class="prog-btn w-100">
-                        <!-- HTML !-->
-                        <button class="button-54 w-100" role="button">READ MORE</button>
-
-                    </div>
-                </div>
-                <div class="prog-card w-100">
-                    <img src="images/kinder.jpg" alt="">
-
-                    <div class="details pt-2">
-                        <h4>LEARN C#, EASY AS ABC</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quis temporibus dolorum magni tempore eveniet iusto minima quisquam impedit! Illo pariatur ab dicta provident id.</p>
-                    </div>
-                    <div class="prog-btn w-100">
-                        <!-- HTML !-->
-                        <button class="button-54 w-100" role="button">READ MORE</button>
-
-                    </div>
-                </div>
-                <div class="prog-card w-100">
-                    <img src="images/kinder.jpg" alt="">
-
-                    <div class="details pt-2">
-                        <h4>LEARN C#, EASY AS ABC</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quis temporibus dolorum magni tempore eveniet iusto minima quisquam impedit! Illo pariatur ab dicta provident id.</p>
-                    </div>
-                    <div class="prog-btn w-100">
-                        <!-- HTML !-->
-                        <button class="button-54 w-100" role="button">READ MORE</button>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr class="w-75">
         <div class="units w-75">
             <div class="header w-100">
-                <h2>My units</h2>
+                <h2>Continue  Learning :</h2>
             </div>
             <hr>
             <div class="units-grid w-100">
@@ -115,11 +72,6 @@
         </div>
     </section>
     <footer class="footer w-100">
-        <div class="upper-footer w-100 ">
-            <h3>FROM OUR SCHOOLYARD</h3>
-            <p>@firstschool</p>
-            <h5>FOLLOW US ON INSTAGRAM</h5>
-        </div>
         <div class="lower-footer w-75">
             <div class="footer-list w-100">
                 <h4>CONTACT US</h4>

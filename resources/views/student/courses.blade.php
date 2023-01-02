@@ -19,7 +19,7 @@
 <body>
     <nav class="main-nav w-100">
         <div class="logo-div">
-            <img src="/images/first_sch.png" alt="">
+            <img src="/images/app_logo.png" alt="">
         </div>
 
         <div class="categories w-75">
@@ -59,11 +59,6 @@
 
     </section>
     <footer class="footer w-100">
-        <div class="upper-footer w-100 ">
-            <h3>FROM OUR SCHOOLYARD</h3>
-            <p>@firstschool</p>
-            <h5>FOLLOW US ON INSTAGRAM</h5>
-        </div>
         <div class="lower-footer w-75">
             <div class="footer-list w-100">
                 <h4>CONTACT US</h4>

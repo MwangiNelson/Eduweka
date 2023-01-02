@@ -13,64 +13,47 @@
     <script src="https://kit.fontawesome.com/db540a34d6.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/index.css">
-    <title>FIRST SCHOOL</title>
+    <title>Eduweka</title>
 </head>
 
 <body>
     <nav class="main-nav w-100">
         <div class="logo-div">
-            <img src="images/first_sch.png" alt="">
+            <img src="images/app_logo.png" alt="">
         </div>
 
-        <div class="categories w-75">
-            <button class="nav_btn"><span class="hov"></span> HOME</button>
-            <button class="nav_btn"><span class="hov"></span> ABOUT</button>
-            <a href="login" class="w-100"> <button class="nav_btn w-100"><span class="hov"></span> LOGIN</button></a>
+        <div class="categories w-50">
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+            <a href="login" class="w-100"> <button class="nav_btn w-100">LOGIN</button></a>
 
-            <a href="register" class="w-100"> <button class="nav_btn w-100"><span class="hov"></span> ENROLL</button></a>
-            <div class="menu-div">
-                <button class="btn-text"><i class="fa-regular fa-compass"></i></button>
-            </div>
+            <a href="register" class="w-100"> <button class="nav_btn w-100">ENROLL</button></a>
         </div>
     </nav>
 
     <section class="main w-100">
-        <div class="hero-text">
-            <h2>We promise this:</h2>
-            <h1>You'll find your academic excellence</h1>
+        <div class="hero-text w-75">
+
+            <h1>&lt;h1&gt; Learn how to code&lt;h1/&gt;</h1>
+            <p>&lt;p&gt;Enroll today to start your coding bootcamp&lt;p/&gt;</p>
         </div>
-        <div class="hero-btns">
-            <a href="register"> <button class="hero-btn" role="button"><span class="text">ENROLL</span></button></a>
-            <button class="hero-btn" role="button"><span class="text">ABOUT US</span></button>
+        <div class="hero-btns w-50">
+            <a href="register"> <button class="button-49 w-25" role="button">ENROLL</button></a>
         </div>
+
+        <!-- HTML !-->
+
+
+
     </section>
     <section class="ad w-100">
-        <div class="text w-100">
-            <h2>Find what your specialty is</h2>
-            <h1>"The key to success is executing your plans earlier"</h1>
-            <p>-Mahatma Ghasia</p>
-        </div>
-        <div class="enrol-options">
-            <button class="btn-enrol-option">
-                <span class="hov-e"></span>
-                Short Courses
-            </button>
-            <button class="btn-enrol-option">
-                <span class="hov-e"></span>
-                Long Term
-            </button>
-            <button class="btn-enrol-option">
-                <span class="hov-e"></span>
-                Academic programs
-            </button>
+        <div class="text w-75">
+            <h2>&lt;h2&gt;Master your desired language in 3months&lt;h2/ &gt;</h2>
+            <p> &lt;p&gt;>Enroll while discounts last&lt;p/ &gt;</p>
         </div>
     </section>
     <footer class="footer w-100">
-        <div class="upper-footer w-100 ">
-            <h3>FROM OUR SCHOOLYARD</h3>
-            <p>@firstschool</p>
-            <h5>FOLLOW US ON INSTAGRAM</h5>
-        </div>
         <div class="lower-footer w-75">
             <div class="footer-list w-100">
                 <h4>CONTACT US</h4>
@@ -78,7 +61,7 @@
                 <h4>PRESS</h4>
                 <h4>CAREERS</h4>
             </div>
-            <p class="w-75">© Copyright 2022 First School. All rights reserved. Terms of Use and Privacy Policy. Site Credits.</p>
+            <p class="w-75">© Copyright 2022 EDUREKA. All rights reserved. Terms of Use and Privacy Policy. Site Credits.</p>
         </div>
     </footer>
 </body>

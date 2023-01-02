@@ -42,11 +42,6 @@
 
 
     <footer class="footer w-100">
-        <div class="upper-footer w-100 ">
-            <h3>FROM OUR SCHOOLYARD</h3>
-            <p>@firstschool</p>
-            <h5>FOLLOW US ON INSTAGRAM</h5>
-        </div>
         <div class="lower-footer w-75">
             <div class="footer-list w-100">
                 <h4>CONTACT US</h4>
@@ -54,7 +49,7 @@
                 <h4>PRESS</h4>
                 <h4>CAREERS</h4>
             </div>
-            <p class="w-75">© Copyright 2022 First School. All rights reserved. Terms of Use and Privacy Policy. Site Credits.</p>
+            <p class="w-75">© Copyright 2022 Eduweka. All rights reserved. Terms of Use and Privacy Policy. Site Credits.</p>
         </div>
     </footer>
 
